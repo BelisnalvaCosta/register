@@ -7,10 +7,9 @@ def register(request):
     success = False
     if request.method == 'GET':
         form = RegisterForm()
-
     else:
         form = RegisterForm(request.POST)
-        if form.is_valid():
+        if form.is_valid():            
             success = True
             form.save()
         content = {
@@ -18,4 +17,3 @@ def register(request):
             'success': success
         }                
     return render(request, 'register.html')
-        

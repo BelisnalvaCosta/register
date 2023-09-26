@@ -12,8 +12,8 @@ def register(request):
         if form.is_valid():            
             success = True
             form.save()
-        content = {
+        context = {
             'form': form,
             'success': success
         }                
-    return render(request, 'register.html')
+    return render(request, 'register.html', context)

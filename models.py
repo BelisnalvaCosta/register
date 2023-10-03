@@ -6,7 +6,7 @@ from django.db import models
 class Register(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=75)
-    eddress = models.strField(max_length=50)
+    eddress = models.CharField(max_length=50)
     phone = models.CharField(max_length=30)
     password = models.CharField(max_length=50)
     date = models.DateField(auto_now=True)
